@@ -5,6 +5,12 @@ h1{
     text-align: center;
     color: #10172c;
 }
-p{
-    color: darkblue;
+.col-md-6{
+    align-content: center;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Saira Extra Condensed',serif;
+    font-weight: 850;
+    text-transform: uppercase;
+    color: #343a40;
 }
