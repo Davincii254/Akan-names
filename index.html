@@ -1,38 +1,86 @@
 <!DOCTYPE html>
 <html>
-    <title>Akan names</title>
-    <head>
-        <link rel="stylesheet" href="css/styles.css">
-        <script src="scripts.js"></script>
-  
-    </head>
+<head>
+	<title>Akan Names</title>
+   	<link rel='stylesheet' href='css/styles.css'>
+</head>
 <body>
-    <h1>Welcome to Akan name identifier</h1>
-    <p>Through the Akan name identifier, you will be able to know your akan name.</p>
-    <p>Akan names are derived from Ghanian culture. Frequently in Ghana, children are given their first name as a 'day name' which corresponds to the day in the week they were born. Here are some of Ghanian day names;</p>
-    <p> Kwasi, Kwadwo, Kwabena, Kwaku, Yaw, Kofi, Kwame</p>
-    <p>If you want to know your Akan name all you have to do is two simple steps</p>
-    <ol>
-        <li>Enter your birth year</li>
-        <li>Enter your gender</li>
-    </ol>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-4 intro">
+				<h1 class="akan-heading">Akan <span class="heading-name">Names</span></h1>
+				<hr>
+				<div class="akan-description">
+					<p class="fs12">A website that allows a user to enter their birth year and gender and provides their Akan names. </p>
+					<p class="fs12">Here are some of the Akan Names</p>
+					<div class="row ghanaian-names">
+						<div class="col-md-6">
+							<h4><i class="fa fa-female"></i>&nbsp;&nbsp;Female</h4>
+							<ul class="fs11">
+								<li>Sunday: Akosua</li>
+								<li>Monday: Adwoa</li>
+								<li>Tuesday: Abenaa</li>
+								<li>Wednesday: Akua</li>
+								<li>Thursday:  Yaa</li>
+								<li>Friday: Afua</li>
+								<li>Saturday: Ama</li>
+							</ul>
+						</div>
+						<div class="col-md-6">
+							<h4><i class="fa fa-male"></i>&nbsp;&nbsp; Male</h4>
+							<ul class="fs11">
+								<li>Sunday: Kwasi</li>
+								<li>Monday: Kwadwo</li>
+								<li>Tuesday: Kwabena</li>
+								<li>Wednesday: Kwaku</li>
+								<li>Thursday:  Yaw</li>
+								<li>Friday: Kofi</li>
+								<li>Saturday: Kwame</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 mt30 akan-form">
+				<h5>Please Enter Your Birthdate Here:</h5>
+				<div class="add-stylist-form">
+					<form>
+						<div class="form-group mb15">
+			              	<label class="label">Birthday</label>
+			               	<div class="input-group mb15">
+				                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+				                <input type="text" placeholder="mm/dd/yyyy" id="myBirthDate" class="form-control" autocomplete="off">
+				             </div>
+			            </div>   
 
+						<div class="form-group mb15">
+			              	<label class="label">Gender</label>
+			               	<div class="rdio rdio-default fs11">
+		                        <input type="radio" name="gender" id="male" value="Male">
+		                        <label for="male">&nbsp;&nbsp;Male</label>
+		                    </div>
+		                    <div class="rdio rdio-default fs11">
+		                        <input type="radio" name="gender" value="Female" id="female">
+		                        <label for="female">&nbsp;&nbsp;Female</label>
+		                     </div>
+			            </div>
+			            <button type="submit" onclick="getAkanName(); return false;" class="btn btn-primary btn-xs"><i class="fa fa-search" aria-hidden="true"></i>&nbsp;&nbsp;Get Akan Name</button>
+			            <button type="reset" onclick="clearAkanMessage(); return false;" class="btn btn-default btn-xs"><i class="fa fa-times" aria-hidden="true"></i>&nbsp;&nbsp;Cancel</button>		
+					</form>	
+				</div>
+				<hr>
+				<div class="your-akan-name">
+					<p id="message" class="output"></p>
+				</div>
+			</div>
+			<div class="col-md-2"></div>
+		</div>
 
-    <h2>Enter your birthday</h2>
-    <form action="">
-        <label for="bday">Year of birth:</label><br>
-        <input type="text" id="bday" name="bday"><br>
-        
-      </form>
-
-
-    <h3>Enter your Gender</h3>
-    <form>
-        <input type="radio" id="male" name="gender" value="male">
-        <label for="male">Male</label><br>
-        <input type="radio" id="female" name="gender" value="female">
-        <label for="female">Female</label><br>
-        <input type="submit" value="Submit">
-    </form>
+		
+	<script src="css/js/jquery-3.4.1.js"></script>
+    <script src="css/js/jquery.maskedinput.min.js"></script>
+    <script src="css/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
